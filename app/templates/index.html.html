@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<h1 align="center">Order Your Meal Here</h1>
+<script>
+  function fruitorder()
+  {
+      
+    if(document.getElementById("pizza1").checked == true)
+    {
+      pizza = "ordered 1 pizza"; 
+    }
+    if(document.getElementById("ham1").checked == true)
+    {
+      hamburger = "ordered 1 hamburger";
+    }
+    if(document.getElementById("fries1").checked == true)
+    {
+      fries = "ordered 1 french fries";
+    }
+    if(document.getElementById("pizza2").checked == true)
+    {
+      pizza = "ordered 2 pizza";
+    }
+    if(document.getElementById("ham2").checked == true)
+    {
+        hamburger = "ordered 2 hamburger";
+    }
+    if(document.getElementById("fries2").checked == true)
+    {
+      fries = "ordered 2 french fries";
+    }
+    if(document.getElementById("pizza3").checked == true)
+    {
+      pizza = "ordered 3 pizza";
+    }
+    if(document.getElementById("ham3").checked == true)
+    {
+        hamburger = "ordered 3 hamburger";
+    }
+    if(document.getElementById("fries3").checked == true)
+    {
+      fries = "ordered 3 french fries";
+    }
+    
+    document.getElementById("transport").innerHTML = pizza;
+    document.getElementById("transport1").innerHTML = hamburger;
+    document.getElementById("transport2").innerHTML = fries;
+    return false;
+    
+    }
+</script>
+
+</head>
+<body>
+<p style="text-align:center;">
+<img src="pizza.jpg" width="150" alt="Logo">
+<img src="hamburger.jpg" width="150" alt="Logo">
+<img src="French Fries.jpg" width="150" alt="Logo"></p>
+
+<form method="post" onsubmit="return fruitorder()">
+<table align="center" border="1" width="500">
+<tr>
+<td>Food</td><td>Number of Food</td>
+</tr>
+<tr>
+<td>pizza</td><td><input type="radio" id="pizza1" name="pizza" value="1">1
+<input type="radio" id="pizza2" name="pizza" value="2">2
+<input type="radio" id="pizza3" name="pizza" value="3">3</td>
+</tr>
+<tr>
+<td>hamburger</td><td><input type="radio" id="ham1" name="hamburger" value="h1">1
+<input type="radio" id="ham2" name="hamburger" value="h2">2
+<input type="radio" id="ham3" name="hamburger" value="h3">3</td>
+</tr>
+<tr>
+<td>french fries</td><td><input type="radio" id="fries1" name="french fries" value="f1">1
+<input type="radio" id="fries2" name="french fries" value="f2">2
+<input type="radio" id="fries3" name="french fries" value="f3">3</td>
+</tr>
+<tr>
+<td><input type="submit" value="Next"></td><td>Submit your order!Thank You</td>
+</tr>
+</table>
+</form>
+<br><br>
+<table align="center" border="1" width="400">
+<tr>
+<td width="33%">Food :</td><td align="center">Quantity </td></tr>
+<tr>
+<td width="33%">pizza: </td><td><div id="transport"></div></td>
+</tr>
+<tr>
+<td width="33%">hamburger: </td><td><div id="transport1"></div></td>
+</tr>
+<tr>
+<td width="33%">french fries: </td><td><div id="transport2"></div></td>
+</tr>
+</table> 
+</body>
+</html>
